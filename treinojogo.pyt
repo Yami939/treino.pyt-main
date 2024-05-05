@@ -57,8 +57,8 @@ while True:
         if pygame.key.get_pressed()[K_s]:
             y = y + 20          
        
-    cobra = pygame.draw.circle(tela, (60,26,198), (x,y,40,50))
-    maca = pygame.draw.circle(tela, (17,179,187), (x_verde,y_verde,40,50))
+    cobra = pygame.draw.rect(tela, (0,255,0), (x,y,40,50))
+    maca = pygame.draw.rect(tela, (255,0,0), (x_verde,y_verde,40,50))
      
     if cobra.colliderect(maca):
         x_verde = randint(40,600)
