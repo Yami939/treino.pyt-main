@@ -2,6 +2,7 @@ import pygame
 from pygame.locals import *
 from sys import exit
 from random import randint
+
 pygame.init()
 
 pygame.mixer.music.set_volume(0.2)
@@ -17,7 +18,6 @@ x_cobra= int(largura/2)
 y_cobra = int(altura/2)
 relogio = pygame.time.Clock()
 
-
 x_maca = randint(40,600)
 y_maca = randint(50,430)
 
@@ -26,9 +26,7 @@ fonte =pygame.font.SysFont('Comic Sans', 40, True, True)
 
 tela = pygame.display.set_mode((largura, altura))
 
-
 pygame.display.set_caption('CrazyRacing: Less Wanted')
-
 
 lista_cobra = []
 def aumenta_cobra(lista_cobra):
@@ -48,15 +46,17 @@ while True:
             pygame.quit()
             exit()
         
-        # if event.type == KEYDOWN:
-        #      if event.key == K_a:
-        #          x_cobra = x_cobra - 20
-        #      if event.key == K_d:
-        #          x_cobra = x_cobra + 20
-        #      if event.key == K_w:
-        #          y_cobra = y_cobra - 20
-        #      if event.key == K_s:
-        #          y_cobra = y_cobra + 20 
+        '''
+        if event.type == KEYDOWN:
+              if event.key == K_a:
+                  x_cobra = x_cobra - 20
+              if event.key == K_d:
+                  x_cobra = x_cobra + 20
+              if event.key == K_w:
+                  y_cobra = y_cobra - 20
+              if event.key == K_s:
+                  y_cobra = y_cobra + 20 
+                                         '''
                          
         if pygame.key.get_pressed()[K_a]:
             x_cobra = x_cobra - 20
@@ -66,7 +66,7 @@ while True:
             y_cobra = y_cobra - 20
         if pygame.key.get_pressed()[K_s]:
             y_cobra = y_cobra + 20          
-       
+                                              
     cobra = pygame.draw.rect(tela, (0,255,0), (x_cobra,y_cobra,20,20))
     maca = pygame.draw.rect(tela, (255,0,0), (x_maca,y_maca,20,20))
      
@@ -79,7 +79,6 @@ while True:
     lista_cabeca = []
     lista_cabeca.append(x_cobra)
     lista_cabeca.append(y_cobra)
-    
     
     lista_cobra.append(lista_cabeca)
     
