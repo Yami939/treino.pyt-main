@@ -21,7 +21,7 @@ relogio = pygame.time.Clock()
 x_maca = randint(40,600)
 y_maca = randint(50,430)
 
-velocidade = 4
+velocidade = 5
 x_controle = velocidade
 y_controle = 0
 
