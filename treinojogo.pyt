@@ -130,8 +130,8 @@ while True:
         
         
         
-        if event.type == KEYDOWN:
-            if event.key == K_LEFT:
+            if event.type == KEYDOWN:
+             if event.key == K_LEFT:
                 if x_controle == velocidade:
                     pass
                 else:
