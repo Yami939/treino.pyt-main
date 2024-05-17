@@ -98,6 +98,36 @@ while True:
                 else:
                     x_controle = 0 
                     y_controle = velocidade
+                    
+    if event.type == KEYDOWN:
+            if event.key == K_LEFT :
+                if x_controle == velocidade:
+                    pass
+                else:
+                    x_controle = -velocidade
+                    y_controle = 0 
+                   
+            if event.key == K_RIGHT:
+                if x_controle == -velocidade:
+                    pass
+                else:
+                    x_controle = velocidade
+                    y_controle = 0
+                
+            if event.key == K_UP:
+                if y_controle == velocidade:
+                    pass
+                else:
+                    x_controle = 0
+                    y_controle = -velocidade  
+                  
+            if event.key == K_DOWN:
+                if y_controle == -velocidade:
+                    pass
+                else:
+                    x_controle = 0 
+                    y_controle = velocidade
+        
         
         
         if event.type == KEYDOWN:
